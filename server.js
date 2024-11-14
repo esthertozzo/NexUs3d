@@ -19,7 +19,7 @@ const port = 3001;
 app.use(express.static('public'));
 app.use(express.json());
 const MODEL_NAME = "gemini-pro";
-const API_KEY = "AIzaSyBYDkKh7rCvKqDpsU9G0RUmcJj9a4W1gJY";
+const API_KEY = "SUA_API_KEY_AQUI";
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
