@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus 3d</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><img src="img/nexus3D.svg" alt="" class="logo"></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/" class="nav__link ">home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#sobre" class="nav__link">sobre</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#artigos" class="nav__link">artigos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#planos" class="nav__link">planos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#contato" class="nav__link">contato</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <i class="ri-search-line nav__search" id="search-btn" title="Buscar hospital cadastrado"></i>
+                <!-- Ícone do Dashboard -->
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search" id="search">
+        <form action="/buscarDashboard" method="get" class="search__form">
+            <input id="nomeHospital" name="nomeHospital" type="search" placeholder="em andamento..."
+                class="search__input">
+            <button type="submit" class="buscar__btn"><i class="ri-search-line search__icon"></i></button>
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <div class="login" id="login">
+        <form action="/login" method="post" class="login__form">
+            <h2 class="login__title">Log In</h2>
+
+            <div class="login__group">
+                <div>
+                    <label for="usuario" class="login__label">usuário</label>
+                    <input type="text" placeholder="digite seu usuário" name="usuario" class="login__input" required>
+                </div>
+
+                <div>
+                    <label for="password" class="login__label">senha</label>
+                    <input type="password" placeholder="digite sua senha" name="senha" class="login__input" required>
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    não possui uma conta? <a href="/cadastroHospital">cadastre-se</a>
+                </p>
+
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    <div class="sobre__header">
+        <h4 class="sobre__title">sobre nós</h4>
+        <h1>Tecnologia e Humanização</h1>
+        <h3>Um encontro perfeito</h3>
+        <a href="/time" class="main__btn">nosso time</a>
+    </div>
+
+    <div class="proposito">
+        <div class="proposito__title">
+        <h2>Nosso propósito</h2>
+        <p>Na Nexus3D, acreditamos que a tecnologia deve estar a serviço da vida. Através da impressão 3D, criamos próteses personalizadas que se adaptam perfeitamente a cada indivíduo, proporcionando mais conforto, funcionalidade e autoestima. Nossa equipe de especialistas está sempre em busca de soluções inovadoras para transformar a vida de nossos clientes. Junte-se a nós e descubra um novo significado para a palavra 'possibilidade'.</p>
+        </div>
+        <img src="img/proposito.png" alt="">
+    </div>
+
+    <div class="proposito">
+        <img src="img/compromisso.jpeg" alt="">
+        <div class="compromisso__title">
+        <h2>Um compromisso com o planeta</h2>
+        <p>Buscamos transformar vidas através da tecnologia, reduzindo o tempo de espera e os custos para que mais pessoas tenham acesso a próteses eficientes e personalizadas. Nosso compromisso com a sustentabilidade se reflete na produção de filamentos eco-friendly, que minimizam o impacto ambiental e garantem próteses de alta qualidade.</p>
+        </div>
+    </div>
+
+    <section class="footer">
+        <div class="b-corp">
+           <a href="/filamento"><img src="img/Certified_B_Corporation™.svg.png" alt=""></a>
+        </div>
+        <p class="copyright">
+           Esther - Yasmin - Maria Eduarda - Matheus @ 2024 / 2EMIA
+        </p>
+     </section>
+
+    <script src="/js/nav.js"></script>
+    
+    <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+   integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+   integrity="sha512-/VYneElp5u4puMaIp/4ibGxlTd2MV3kuUIroR3NSQjS2h9XKQNebRQiyyoQKeiGE9mRdjSCIZf9pb7AVJ8DhCg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>

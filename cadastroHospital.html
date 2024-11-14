@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/all.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><img src="img/nexus3D.svg" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">sobre</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">artigos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">planos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">contato</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="box">
+        <div class="img__box">
+            <img src="img/cadastrar.svg" alt="">
+        </div>
+        <div class="form-box">
+             <h2>cadastre-se como hospital ou clínica</h2> 
+            <!-- <p>já é cadastrado? <a href="#" id="login-btn">log in</a></p> -->
+            <form action="/cadastroHospital" method="post">
+                <div class="input-group">
+                    <label for="usuario">seu usuário</label>
+                    <input type="text" name="usuario" placeholder="digite o usuario do hospital/clínica" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">senha</label>
+                    <input type="password" name="senha" placeholder="digite a senha do usuário" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="nomeHospital">nome do hospital/clínica</label>
+                    <input type="text" id="nomeHospital" name="nomeHospital" placeholder="digite o nome do hospital/clínica" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cnpjHospital">CNPJ do hospital/clínica</label>
+                    <input type="text" id="cnpjHospital" name="cnpjHospital" placeholder="digite o CNPJ do hospital/clínica" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" placeholder="digite o email de contato do hospital" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="nomeAdm">nome do administrador</label>
+                    <input type="text" id="nomeAdm" name="nomeAdm" placeholder="digite o nome do administrador" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="tipo">sou</label>
+                    <select id="tipo" name="tipo" class="main__btn">
+                        <option value="hospital">hospital</option>
+                        <option value="clínica">clínica</option>
+                      </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="especialidade">especialidade do hospital/clínica</label>
+                    <select id="especialidade" name="especialidade" class="main__btn">
+                        <option value="">especialidade</option>
+                        <option value="ortopedia">ortopedia</option>
+                        <option value="traumatologia">traumatologia</option>
+                      </select>
+                </div> 
+
+                
+
+                <div class="input-group">
+                    <button type="submit" class="main__btn">cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="/js/nav.js"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+        integrity="sha512-/VYneElp5u4puMaIp/4ibGxlTd2MV3kuUIroR3NSQjS2h9XKQNebRQiyyoQKeiGE9mRdjSCIZf9pb7AVJ8DhCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+
+</html>

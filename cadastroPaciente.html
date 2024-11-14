@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/all.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><img src="img/nexus3D.svg" alt=""></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">sobre</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">artigos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">planos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">contato</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <!-- <i class="ri-search-line nav__search" id="search-btn"></i>
+                <i class="ri-user-line nav__login" id="login-btn"></i> -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- <div class="search" id="search">
+        <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="digite algo..." class="search__input">
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div> -->
+
+    <!-- <div class="login" id="login">
+        <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">email</label>
+                    <input type="email" placeholder="digite seu email" id="email" class="login__input">
+                </div>
+
+                <div>
+                    <label for="senha" class="login__label">senha</label>
+                    <input type="password" placeholder="digite sua senha" id="senha" class="login__input">
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    ainda não é cadastrado? <a href="cadastro.html">cadastrar</a>
+                </p>
+
+                <button type="submit" class="main__btn">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div> -->
+
+
+    <div class="box">
+        <div class="img__box">
+            <img src="img/cadastrar.svg" alt="">
+        </div>
+        <div class="form-box">
+            <h2>cadastrar novo paciente</h2>
+            <!-- <p>já é cadastrado? <a href="#" id="login-btn">log in</a></p> -->
+            <form action="/cadastroPaciente" method="post">
+
+                <!-- <div class="input-group">
+                    <label for="nomeHospital">nome do hospital conveniado</label>
+                    <input type="text" id="nomeHospital" name="nomeHospital" placeholder="digite o nome do hospital conveniado" required>
+                </div> -->
+
+                <div class="input-group">
+                    <label for="nome">nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="digite seu nome completo" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" placeholder="digite seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" maxlength="11" placeholder="digite o seu cpf"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label for="protese">tipo de prótese</label>
+                    <select id="protese" name="protese" class="main__btn">
+                        <option value="">tipo de prótese</option>
+                        <option value="perna">perna</option>
+                        <option value="braço">braço</option>
+                        <option value="mão">mão</option>
+                        <option value="pé">pé</option>
+                      </select>
+                </div>
+
+                <!-- <div class="input-group">
+                    <label for="hospitalPaciente">hospital conveniado:</label>
+                    <input type="text" id="hospitalPaciente" name="hospitalPaciente" placeholder="digite o hospital conveniado">
+                     <select id="hospitalPaciente" name="hospitalPaciente">
+                        <option value="none">nenhum</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> 
+                </div> -->
+
+                <div class="input-group">
+                    <button type="submit" class="main__btn">cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="/js/nav.js"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+        integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+        integrity="sha512-/VYneElp5u4puMaIp/4ibGxlTd2MV3kuUIroR3NSQjS2h9XKQNebRQiyyoQKeiGE9mRdjSCIZf9pb7AVJ8DhCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+
+</html>

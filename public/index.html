@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nexus 3d</title>
+   <link rel="stylesheet" href="/css/home.css">
+   <link rel="stylesheet" href="/css/nav.css">
+   <link rel="stylesheet" href="/css/all.css">
+   <link rel="stylesheet" href="/css/chatbot.css">
+   <link rel="stylesheet" href="/css/footer.css">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=radio_button_checked" />
+</head>
+
+<body>
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav__logo"><img src="img/nexus3D.svg" alt="" class="logo"></a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="#" class="nav__link ">home</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#sobre" class="nav__link">sobre</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#artigos" class="nav__link">artigos</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#planos" class="nav__link">planos</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#contato" class="nav__link">contato</a>
+               </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
+            </div>
+         </div>
+
+         <div class="nav__actions">
+            <i class="ri-search-line nav__search" id="search-btn" title="Buscar hospital cadastrado"></i>
+            <!-- Ícone do Dashboard -->
+            <i class="ri-user-line nav__login" id="login-btn"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <div class="search" id="search">
+      <form action="/buscarDashboard" method="get" class="search__form">
+         <input id="nomeHospital" name="nomeHospital" type="search" placeholder="em andamento..." class="search__input">
+         <button type="submit" class="buscar__btn"><i class="ri-search-line search__icon"></i></button>
+      </form>
+
+      <i class="ri-close-line search__close" id="search-close"></i>
+   </div>
+
+   <div class="login" id="login">
+      <form action="/login" method="post" class="login__form">
+         <h2 class="login__title">Log In</h2>
+
+         <div class="login__group">
+            <div>
+               <label for="usuario" class="login__label">usuário</label>
+               <input type="text" placeholder="digite seu usuário" name="usuario" class="login__input" required>
+            </div>
+
+            <div>
+               <label for="password" class="login__label">senha</label>
+               <input type="password" placeholder="digite sua senha" name="senha" class="login__input" required>
+            </div>
+         </div>
+
+         <div>
+            <p class="login__signup">
+               não possui uma conta? <a href="/cadastroHospital">cadastre-se</a>
+            </p>
+
+            <button type="submit" class="login__button">Log In</button>
+         </div>
+      </form>
+
+      <i class="ri-close-line login__close" id="login-close"></i>
+   </div>
+
+   <!-- chatbot -->
+   <button class="chatbot-toggler">
+      <span class="material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#fff">
+            <path
+               d="M880-80 720-240H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v560ZM160-473l47-47h393v-280H160v327ZM80-280v-520q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240L80-280Zm80-240v-280 280Z" />
+         </svg></span>
+      <span class="material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#fff">
+            <path
+               d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+         </svg></span>
+   </button>
+   <div class="chatbot">
+      <header>
+         <h2>ChatBot</h2>
+         <span class="close-btn material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+               viewBox="0 -960 960 960" width="24px" fill="#fff">
+               <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></span>
+      </header>
+      <ul class="chatbox">
+         <li class="chat incoming">
+            <span class=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#fff">
+                  <path
+                     d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Zm200-80q25 0 42.5-17.5T420-500q0-25-17.5-42.5T360-560q-25 0-42.5 17.5T300-500q0 25 17.5 42.5T360-440Zm240 0q25 0 42.5-17.5T660-500q0-25-17.5-42.5T600-560q-25 0-42.5 17.5T540-500q0 25 17.5 42.5T600-440ZM320-280h320v-80H320v80Zm-80 80h480v-480H240v480Zm240-240Z" />
+               </svg></span>
+            <p>Olá, sou o Nex 👋🦾 <br>Tire suas dúvidas aqui.
+            </p>
+         </li>
+      </ul>
+      <div class="chat-input">
+         <textarea placeholder="digite algo aqui..." required></textarea>
+         <span id="send-btn" class="material-symbols-outlined"><img
+               src="img/send_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+      </div>
+   </div>
+
+
+   <main class="main">
+      <div class="main__text">
+         <h1>O <span>centro</span> da sua nova vida,
+            sua nova realidade, criada sob medida para <span>você</span>. </h1>
+         <p>Descubra como a <em>tecnologia 3D</em> pode transformar a sua vida.</p>
+         <a href="/cadastroHospital" class="main__btn">cadastre-se</a>
+      </div>
+      <div>
+         <img src="img/protese mao.png" alt="main__img" class="main__bg">
+      </div>
+   </main>
+
+   <section class="sobre" id="sobre">
+      <div class="sobre__text">
+         <h2>Personalização e Inovação</h2>
+         <h1>Sua Prótese, Sua Identidade</h1>
+         <p>A Nexus3D oferece próteses 3D personalizadas para cada indivíduo, nossas próteses proporcionam mais
+            autonomia e qualidade de vida. Empoderamos nossos clientes a viverem suas vidas ao máximo.</p>
+         <a href="/sobre" class="sobre__btn">sobre nós</a>
+      </div>
+      <div class="sobre__img">
+         <img src="img/sobre__img.avif" alt="">
+      </div>
+   </section>
+
+   <section class="sec__3d">
+      <div class="hr__h1">
+         <h1>Restaurando Vidas, Um a Um</h1>
+         <hr>
+      </div>
+      <div class="hr__p">
+         <p>Acreditamos que cada pessoa merece viver uma vida plena e independente, e estamos comprometidos em fazer a
+            diferença. Em um futuro onde a tecnologia seja uma ferramenta para melhorar a vida de todos.</p>
+         <hr>
+      </div>
+      <section class="">
+         <!-- elemento 3d -->
+         <div class="sketchfab-embed-wrapper"> <iframe title="Hero Arm - Open Bionics concept - Prosthetic Arm"
+               frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+               allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport
+               execution-while-not-rendered web-share width="840" height="480"
+               src="https://sketchfab.com/models/ac4efd02a2194fd1b9a7e5abc4aa08e6/embed?autostart=1&camera=0"> </iframe>
+         </div>
+      </section>
+   </section>
+
+   <div class="text__linha">
+      <h2>além de impressões</h2>
+      <h1>Um futuro de possibilidades</h1>
+   </div>
+   <section class="depoimentos">
+      <ul>
+         <li>
+            <div class="content__timeline">
+               <h3>Paola Antonini</h3>
+               <p>Em 27 de dezembro de 2014, Paola Antonini sofreu um acidente que resultou na amputação da perna
+                  esquerda. Ela afirmou: <em>"Só consigo agradecer imensamente a Deus por essa chance de viver!"</em> Em
+                  2020, fundou o Instituto Paola Antonini para apoiar a reabilitação de pessoas com deficiência física.
+               </p>
+            </div>
+            <div class="time__img">
+               <img src="img/paola1.avif" alt="" class="paola1__img">
+            </div>
+         </li>
+
+         <li>
+            <div class="content__timeline">
+               <h3>Leandro Jardel</h3>
+               <p>Leandro Jardel é atleta de halterofilismo paralímpico pelo CPB. Mesmo sem as duas pernas, a
+                  dificuldade física nunca o impediu de praticar esportes e cuidar do corpo. Ele encontrou no
+                  halterofilismo uma paixão e superou inúmeros desafios. Suas próteses lhe proporcionam mobilidade e
+                  confiança para enfrentar cada treino e competição. <em>"Com dedicação e as ferramentas certas, podemos
+                     conquistar qualquer meta."</em></p>
+            </div>
+            <div class="time__img">
+               <img src="img/alexandre.png" alt="" class="paola__img">
+            </div>
+         </li>
+
+         <li>
+            <div class="content__timeline">
+               <h3>Edson Dantas</h3>
+               <p>
+                  Dantas perdeu parte da perna aos 26 anos em um arrastão, mas após seis meses de recuperação voltou ao
+                  esporte. Aos 34, descobriu a corrida e fez sua primeira prova: <em>"Meus primeiros 10 km foram na
+                     Maratona Pão de Açúcar de Revezamento. Aquilo foi uma loucura".</em> Com uma prótese adequada em
+                  2005, tornou-se atleta competitivo. <em>"As pessoas têm que ter fé e perseverança. Tudo é
+                     possível."</em></p>
+            </div>
+            <div class="time__img">
+               <img src="img/edson.png" alt="" class="paola__img">
+            </div>
+         </li>
+         <div style="clear: both;"></div>
+      </ul>
+   </section>
+   <section class="timeline">
+      <ul>
+         <li>
+            <div class="content__timeline">
+               <h3>Paola Antonini</h3>
+               <p>Em 27 de dezembro de 2014, Paola Antonini sofreu um acidente que resultou na amputação da perna
+                  esquerda. Ela afirmou: <em>"Só consigo agradecer imensamente a Deus por essa chance de viver!"</em> Em
+                  2020, fundou o Instituto Paola Antonini para apoiar a reabilitação de pessoas com deficiência física.
+               </p>
+            </div>
+            <div class="time__img">
+               <img src="img/paola1.avif" alt="" class="paola1__img">
+            </div>
+         </li>
+
+         <li>
+            <div class="content__timeline">
+               <h3>Leandro Jardel</h3>
+               <p>Leandro Jardel é atleta de halterofilismo paralímpico pelo CPB. Mesmo sem as duas pernas, a
+                  dificuldade física nunca o impediu de praticar esportes e cuidar do corpo. Ele encontrou no
+                  halterofilismo uma paixão e superou inúmeros desafios. Suas próteses lhe proporcionam mobilidade e
+                  confiança para enfrentar cada treino e competição. <em>"Com dedicação e as ferramentas certas, podemos
+                     conquistar qualquer meta."</em></p>
+            </div>
+            <div class="time__img">
+               <img src="img/alexandre.png" alt="" class="paola__img">
+            </div>
+         </li>
+
+         <li>
+            <div class="content__timeline">
+               <h3>Edson Dantas</h3>
+               <p>
+                  Dantas perdeu parte da perna aos 26 anos em um arrastão, mas após seis meses de recuperação voltou ao
+                  esporte. Aos 34, descobriu a corrida e fez sua primeira prova: <em>"Meus primeiros 10 km foram na
+                     Maratona Pão de Açúcar de Revezamento. Aquilo foi uma loucura".</em> Com uma prótese adequada em
+                  2005, tornou-se atleta competitivo. <em>"As pessoas têm que ter fé e perseverança. Tudo é
+                     possível."</em></p>
+            </div>
+            <div class="time__img">
+               <img src="img/edson.png" alt="" class="antonio__img">
+            </div>
+         </li>
+         <div style="clear: both;"></div>
+      </ul>
+   </section>
+
+
+   <div class="artigos" id="artigos">
+      <div class="artig__title">
+         <h2>Nosso <span>universo 3D</span>: tudo o que <span>você precisa saber</span></h2>
+         <p><em>Artigos pensados para quem busca mais autonomia e independência</em></p>
+      </div>
+      <div class="cards__art">
+
+         <div class="card__art card1">
+            <div class="container__art">
+               <img src="img/card1.avif" alt="">
+            </div>
+            <div class="details">
+               <h3>Acessibilidade e inclusão</h3>
+               <p>No Brasil, estima-se que existe cerca de 18,6 milhões de pessoas com deficiência, sejam elas motoras,
+                  visuais, auditivas ou intelectuais, representando aproximadamente 8,9% da população...</p>
+               <a href="/acessibilidade" class="art__btn">Leia mais "</a>
+            </div>
+         </div>
+
+         <div class="card__art card2">
+            <div class="container__art">
+               <img src="img/card2.avif" alt="">
+            </div>
+            <div class="details">
+               <h3>Superação e Autoestima</h3>
+               <p>A vida é repleta de desafios, e para muitas pessoas, a superação de dificuldades se torna um caminho
+                  para o autoconhecimento e a construção de uma autoestima que seja mais saudável...</p>
+               <a href="/autoestima" class="art__btn">Leia mais "</a>
+            </div>
+         </div>
+
+         <div class="card__art card3">
+            <div class="container__art">
+               <img src="img/cana-de-acucar.avif" alt="">
+            </div>
+            <div class="details">
+               <h3>Inovação sustentável e inclusiva</h3>
+               <p>Nos últimos anos, a produção de filamentos para impressão 3D tem buscado cada vez mais alternativas
+                  sustentáveis. Nosso material é a cana de açúcar, que não só é renovável...</p>
+               <a href="/filamento" class="art__btn">Leia mais "</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <section class="planos">
+      <div class="planos__title" id="planos">
+         <h2>Seu Plano, Sua Realidade</h2>
+         <p><em>Escolha o plano que mais se adapta às suas necessidades e desfrute de uma experiência
+               personalizada.</em></p>
+      </div>
+      <div class="wrapper">
+         <div class="price__cards">
+            <div class="price__card glass">
+               <div class="price__details">
+                  <h3>Apoio e inspiração</h3>
+                  <p>Durante as paraolimpíadas, a partir de 28 de agosto a 8 de setembro.</p>
+                  <ul>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Capa protetora</li>
+                     </div>
+
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Personalização exclusiva</li>
+                     </div>
+
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Gravação personalizada</li>
+                     </div>
+                  </ul>
+               </div>
+               <hr>
+               <div class="price">10</div>
+               <span>de desconto</span>
+            </div>
+
+            <div class="price__card glass">
+               <div class="price__details">
+                  <h3>Motivação</h3>
+                  <p>Incentivo à resiliência no Dia do Deficiente Físico, 11 de outubro.</p>
+                  <ul>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Workshop de customização</li>
+                     </div>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Acessórios exclusivos</li>
+                     </div>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Consultoria de imagem</li>
+                     </div>
+
+                  </ul>
+               </div>
+               <hr>
+               <div class="price">20</div>
+               <span>de desconto</span>
+            </div>
+
+            <div class="price__card glass">
+               <div class="price__details">
+                  <h3>Semana das crianças</h3>
+                  <p>Em comemoração ao Dia das Crianças, 12 de outubro.</p>
+                  <ul>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Pelúcia personalizada</li>
+                     </div>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Kit do Super-Herói</li>
+                     </div>
+                     <div class="correct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-check" viewBox="0 0 16 16">
+                           <path
+                              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+                        </svg>
+                        <li>Materiais inovadores</li>
+                     </div>
+
+                  </ul>
+               </div>
+               <hr>
+               <div class="price">25</div>
+               <span>de desconto</span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="contato">
+      <div class="planos__title cont" id="contato">
+         <h2>Gostaria de entrar em contato?</h2>
+         <p><em>Conheça nossos canais de atendimento.</em></p>
+         <div class="linha__cont">
+            <div class="linha__cont">
+               <div class="linha__tel">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                     class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                     <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                  </svg>
+                  <div class="coluna__tel">
+                     <p><strong>Telefone:</strong></p>
+                     <p>(+11) 7777-777</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="linha__cont">
+               <div class="linha__tel">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                     class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                     <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                  </svg>
+                  <div class="coluna__tel">
+                     <p><strong>Email:</strong></p>
+                     <p>nexus3D@gmail.com</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="linha__cont">
+               <div class="linha__tel">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                     class="bi bi-whatsapp" viewBox="0 0 16 16">
+                     <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                  </svg>
+                  <div class="coluna__tel">
+                     <p><strong>Whatsapp:</strong></p>
+                     <p>(+11) 9999-999</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="parceiros" id="contato">
+            <h3>Conheça nossos principais <span>parceiros</span></h3>
+            <p>Uma rede de conexões para um futuro promissor. Explore nosso mapa de parceiros e encontre as soluções
+               ideais para seus objetvos.</p>
+            <div class="hospitais__lista" id="hospitais-lista">
+
+            </div>
+         </div>
+         <div class="linha__local">
+
+            <div class="mapa"></div>
+         </div>
+      </div>
+   </section>
+
+   <section class="footer">
+      <div class="b-corp">
+         <a href="/filamento"><img src="img/Certified_B_Corporation™.svg.png" alt=""></a>
+      </div>
+      <p class="copyright">
+         Esther - Yasmin - Maria Eduarda - Matheus @ 2024 / 2EMIA
+      </p>
+   </section>
+
+
+   <script src="/js/nav.js"></script>
+
+   <script>
+      const chatInput = document.querySelector(".chat-input textarea");
+      const sendChatBtn = document.querySelector(".chat-input span");
+      const chatbox = document.querySelector(".chatbox");
+      const chatbotToggler = document.querySelector(".chatbot-toggler");
+      const chatbotCloseBtn = document.querySelector(".close-btn");
+
+      const createChatLi = (message, className) => {
+         const chatLi = document.createElement("li");
+         chatLi.classList.add("chat", className);
+         let chatContent = className === "outgoing" ? `<p>${message}</p>` : `<span class=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Zm200-80q25 0 42.5-17.5T420-500q0-25-17.5-42.5T360-560q-25 0-42.5 17.5T300-500q0 25 17.5 42.5T360-440Zm240 0q25 0 42.5-17.5T660-500q0-25-17.5-42.5T600-560q-25 0-42.5 17.5T540-500q0 25 17.5 42.5T600-440ZM320-280h320v-80H320v80Zm-80 80h480v-480H240v480Zm240-240Z"/></svg></span><p>${message}</p>`
+         chatLi.innerHTML = chatContent;
+         return chatLi;
+
+      };
+
+      const batePapo = async () => {
+         const userMessage = chatInput.value.trim();
+         if (!userMessage) return;
+
+         //adicionar a menssagem do usuario no chat
+         chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+         chatInput.value = '';
+
+         //carregar com ... enquanto aguarda a resposta
+         const loadingMessage = createChatLi("...", "incoming");
+         chatbox.appendChild(loadingMessage);
+
+         try {
+            const response = await fetch('/chat', {
+               method: 'POST',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ chatInput: userMessage })
+            });
+            const data = await response.json();
+
+            //tira ... e adiciona a resposta
+            chatbox.removeChild(loadingMessage);
+            chatbox.appendChild(createChatLi(data.response, "incoming"));
+         } catch (error) {
+            console.error('Erro:', error);
+            loadingMessage.innerText = "Erro ao obter resposta";
+         }
+      };
+
+      chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+      chatbotCloseBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+      sendChatBtn.addEventListener("click", batePapo);
+   </script>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+         fetch('/hospitais')
+            .then(response => response.json())
+            .then(hospitais => {
+               const lista = document.getElementById('hospitais-lista');
+               lista.innerHTML = hospitais.map(hospital => `
+                      <ul>
+                          <li class="li__parceiros">${hospital.nomeHospital}</li>
+                          <div class="line__hosp">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+</svg><p>${hospital.tipo} de ${hospital.especialidade}</p>
+</div>
+                          
+                      </ul>
+                  `).join('');
+            })
+            .catch(error => console.error('Erro ao carregar hospitais:', error));
+      });
+   </script>
+
+   <script>
+      // cadastro com sucesso
+      window.onload = function () {
+         const urlParams = new URLSearchParams(window.location.search);
+         const success = urlParams.get('success');
+
+         if (success === 'true') {
+            alert('Cadastro realizado com sucesso! Agora você pode fazer login.');
+         }
+      };
+   </script>
+
+   <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+      integrity="sha512-/VYneElp5u4puMaIp/4ibGxlTd2MV3kuUIroR3NSQjS2h9XKQNebRQiyyoQKeiGE9mRdjSCIZf9pb7AVJ8DhCg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+
+</html>

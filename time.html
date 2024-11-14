@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus 3d</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><img src="img/nexus3D.svg" alt="" class="logo"></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/" class="nav__link ">home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#sobre" class="nav__link">sobre</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#artigos" class="nav__link">artigos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#planos" class="nav__link">planos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/#contato" class="nav__link">contato</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <i class="ri-search-line nav__search" id="search-btn" title="Buscar hospital cadastrado"></i>
+                <!-- Ícone do Dashboard -->
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search" id="search">
+        <form action="/buscarDashboard" method="get" class="search__form">
+            <input id="nomeHospital" name="nomeHospital" type="search" placeholder="em andamento..."
+                class="search__input">
+            <button type="submit" class="buscar__btn"><i class="ri-search-line search__icon"></i></button>
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <div class="login" id="login">
+        <form action="/login" method="post" class="login__form">
+            <h2 class="login__title">Log In</h2>
+
+            <div class="login__group">
+                <div>
+                    <label for="usuario" class="login__label">usuário</label>
+                    <input type="text" placeholder="digite seu usuário" name="usuario" class="login__input" required>
+                </div>
+
+                <div>
+                    <label for="password" class="login__label">senha</label>
+                    <input type="password" placeholder="digite sua senha" name="senha" class="login__input" required>
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    não possui uma conta? <a href="/cadastroHospital">cadastre-se</a>
+                </p>
+
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    
+
+    <section class="time">
+
+    <div class="card__sobre">
+        <div class="wrapper__time">
+            <div class="image__time">
+               <img src="img/garra.png" alt="">
+               <div class="content__time">
+                <h1>Olá!</h1>
+                <p>Eu sou a Esther, desenvolvedora full stack responsável pelo desenvolvimento do back-end e front-end deste site. Participei na criação do CRUD com MongoDB e Node.js, no desenvolvimento do Sistema de Login para Hospitais e desenvolvi o conteúdo completo usando HTML, CSS e JavaScript, visando uma navegação intuitiva e funcional para nossos usuários.</p>
+               </div>
+            </div>
+        </div>
+        <img src="img/esther.png" alt="" class="time__img">
+    </div>
+
+    <div class="card__sobre">
+        <div class="wrapper__time">
+            <div class="image__time">
+               <img src="img/garra.png" alt="">
+               <div class="content__time">
+                <h1>Olá!</h1>
+                <p>Eu sou a Yasmin e participei no desenvolvimento das ideias, pesquisas estudos para o blog do nosso site.</p>
+               </div>
+            </div>
+        </div>
+        <img src="img/yasmin.png" alt="" class="time__img">
+    </div>
+
+    <div class="card__sobre">
+        <div class="wrapper__time">
+            <div class="image__time">
+               <img src="img/garra.png" alt="">
+               <div class="content__time">
+                <h1>Olá!</h1>
+                <p>Eu sou a Duda e urante o desenvolvimento do projeto colaborei com a criação da identidade visual do site, da interface e de toda a parte criativa que estamos apresentando. Além disso, tive a honra de ser Srum Master do grupo auxiliando com a organização das ideias e em um método ágil que foi crucial para nosso resultado final.</p>
+               </div>
+            </div>
+        </div>
+        <img src="img/maria eduarda.png" alt="" class="time__img">
+    </div>
+
+    <div class="card__sobre">
+        <div class="wrapper__time">
+            <div class="image__time">
+               <img src="img/garra.png" alt="">
+               <div class="content__time">
+                <h1>Olá!</h1>
+                <p>Eu sou o Matheus, e tive o prazer de contribuir com este projeto de forma significativa. Fui responsável pela elaboração dos depoimentos, garantindo que cada palavra refletisse a essência do nosso projeto e transmitisse nossa mensagem com clareza e impacto. Além disso, participei ativamente da criação das ideias, colaborando com a equipe para desenvolver soluções criativas e inovadoras.</p>
+               </div>
+            </div>
+        </div>
+        <img src="img/matheus.png" alt="" class="time__img">
+    </div>
+</section>
+
+<section class="footer">
+    <div class="b-corp">
+       <a href="/filamento"><img src="img/Certified_B_Corporation™.svg.png" alt=""></a>
+    </div>
+    <p class="copyright">
+       Esther - Yasmin - Maria Eduarda - Matheus @ 2024 / 2EMIA
+    </p>
+ </section>
+
+    <script src="/js/nav.js"></script>
+    
+    <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+   integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+   integrity="sha512-/VYneElp5u4puMaIp/4ibGxlTd2MV3kuUIroR3NSQjS2h9XKQNebRQiyyoQKeiGE9mRdjSCIZf9pb7AVJ8DhCg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>

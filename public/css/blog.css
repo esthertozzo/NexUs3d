@@ -1,0 +1,122 @@
+.read-carreira{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 30%;
+    max-width: 100%;
+    height: 500px;
+    border-radius: 16px;
+}
+.txt-leitura1{
+    margin: 5%;
+    margin-left: 8%;
+}
+.txt-leitura1 ol{
+    margin-left: 1%;
+}
+.txt-leitura1 ol li{
+    padding: 4px;
+}
+.txt-leitura1 h3{
+    font-size: 30px;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    color:var(--titleBlog);
+}
+.txt-leitura1 h2{
+    font-size: 20px;
+    margin-bottom: 1rem;
+    color:var(--titleBlog);
+}
+.txt-leitura1 .sub{
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--subtitleBlog);
+}
+.txt-leitura1 p{
+    margin-bottom: 1rem;
+    font-size: 16px;
+    color: #bababa;
+}
+.txt-leitura1 ul .li-social{
+    display: inline-block;
+    padding: 0 0.3rem 0 0.3rem;
+    color:#fff;
+} 
+ul .li-social{
+    font-size: 20px;
+    cursor: pointer;
+}
+.share{
+    margin-top: 3rem;
+}
+.more-blog{
+    color: var(--titles);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 3%;
+}
+.card-slider{
+    /*min-height: 50vh;*/
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   background-color: var(--background);
+}
+.slide-container{
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.card{
+    border-radius: 25px;
+    background-color: var(--bg-card);
+    color: #000;
+}
+.image-content, 
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--blueMain);
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--blueMain);
+    border: none;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: var(--bg-card);
+}
+
+.selo{
+    max-width: 4%;
+    height: 4%;
+    margin-top: 1rem;
+}
