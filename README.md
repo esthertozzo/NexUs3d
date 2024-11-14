@@ -57,3 +57,6 @@
 
 ##### Executar servidor
     node server.js
+
+#### Link Youtube:
+https://youtu.be/Bq7_507QHwQ
